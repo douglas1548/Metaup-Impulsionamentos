@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://douglas1548.github.io/metaup/sitemap.xml
+Sitemap: https://metaup.site/sitemap.xml
