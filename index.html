@@ -86,14 +86,7 @@ a{color:inherit;text-decoration:none;}
 
 /* ---------- hero ---------- */
 .hero{padding:64px 0 0;border-bottom:1px solid var(--line);}
-.hero-head{max-width:1000px;}
-.hero-bottom{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:48px;align-items:center;margin-top:10px;}
-@media(max-width:860px){.hero-bottom{grid-template-columns:1fr;gap:34px;}}
-.hero-action .hero-cta{margin-bottom:26px;}
-.hero-proof{list-style:none;border-top:1px solid var(--line);}
-.hero-proof li{padding:12px 0 12px 26px;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--ink-60);position:relative;}
-.hero-proof li::before{content:'';position:absolute;left:0;top:19px;width:12px;height:12px;background:var(--signal);border:2px solid var(--ink);}
-.hero-proof b{color:var(--ink);font-weight:600;}
+.hero-head{max-width:1000px;margin-bottom:40px;}
 .kicker{display:inline-block;background:var(--ink);color:var(--paper-2);font-size:0.78rem;font-weight:600;padding:6px 12px;margin-bottom:22px;}
 .hero h1{font-size:clamp(2.2rem,5.2vw,4.4rem);margin-bottom:22px;}
 .hero h1 em{margin-top:10px;}
@@ -102,19 +95,13 @@ a{color:inherit;text-decoration:none;}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
 .hero-note{font-size:0.86rem;color:var(--ink-60);margin-top:16px;}
 
-.ticket{background:var(--paper-2);border:2px solid var(--ink);padding:26px;box-shadow:8px 8px 0 var(--ink);}
-.ticket .t-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--line);font-size:0.94rem;}
-.ticket .t-row:last-of-type{border-bottom:none;}
-.ticket .t-row span:last-child{font-family:'JetBrains Mono',monospace;font-weight:700;}
-.ticket h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:0.95rem;letter-spacing:0.04em;margin-bottom:14px;}
-.ticket .t-total{background:var(--signal);margin:14px -26px -26px;padding:18px 26px;display:flex;justify-content:space-between;align-items:center;border-top:2px solid var(--ink);}
-.ticket .t-total strong{font-family:'Archivo',sans-serif;font-size:1.5rem;font-weight:800;}
 
 .strip{border-top:1px solid var(--line);margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);}
 @media(max-width:780px){.strip{grid-template-columns:repeat(2,1fr);}}
 .strip>div{padding:28px 16px 30px;border-right:1px solid var(--line);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
 .strip>div:last-child{border-right:none;}
 .strip .n{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(1.5rem,4.2vw,2.1rem);line-height:1;letter-spacing:-0.03em;white-space:nowrap;}
+.strip .n.sm{font-size:clamp(1.15rem,3vw,1.5rem);}
 .strip .l{font-size:0.84rem;color:var(--ink-60);margin-top:8px;max-width:18ch;}
 @media(max-width:780px){.strip>div:nth-child(2){border-right:none;}.strip>div:nth-child(-n+2){border-bottom:1px solid var(--line);}}
 
@@ -128,19 +115,12 @@ section{padding:82px 0;border-bottom:1px solid var(--line);}
 .auth{background:var(--paper-2);}
 .auth-grid{display:block;}
 .auth-sig{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--blue);font-weight:700;margin-bottom:14px;}
+.auth-text p{max-width:66ch;}
+.auth-bag{border-left:8px solid var(--signal);padding:14px 0 14px 22px;margin-top:22px;}
+.auth-bag strong{color:var(--ink);}
 .auth-text h2{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:112%;letter-spacing:-.022em;line-height:1.03;font-size:clamp(1.8rem,3.8vw,2.7rem);margin-bottom:18px;max-width:24ch;}
 .auth-text p{color:var(--ink-60);font-size:1.03rem;margin-bottom:16px;max-width:60ch;}
 .auth-text p strong{color:var(--ink);font-weight:600;}
-.auth-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px;}
-@media(max-width:560px){.auth-stats{grid-template-columns:1fr;}}
-.auth-stats>div{background:var(--paper-2);padding:22px 18px;text-align:center;}
-.auth-stats .n{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.7rem;white-space:nowrap;line-height:1;letter-spacing:-.03em;}
-.auth-stats .l{font-size:.82rem;color:var(--ink-60);margin-top:6px;}
-.roster{margin-top:44px;border-top:1px solid var(--line);padding-top:26px;}
-.roster .rt{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--ink-60);margin-bottom:18px;}
-.roster ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px;}
-.roster li{font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;border:1px solid var(--ink);padding:9px 16px;background:var(--paper);}
-.roster li.more{border-style:dashed;font-weight:500;color:var(--ink-60);font-family:'Instrument Sans',sans-serif;}
 
 /* prints de campanhas */
 .proof{background:var(--ink);color:var(--paper);border-bottom:1px solid #2A303B;}
@@ -183,17 +163,6 @@ section{padding:82px 0;border-bottom:1px solid var(--line);}
 
 .btn-dark{background:var(--ink);color:var(--paper-2);border-color:var(--ink);}
 .btn-dark:hover{background:var(--blue);border-color:var(--blue);}
-.hero-head .hero-cta{margin-top:30px;}
-.hero-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px;}
-@media(max-width:560px){.hero-two{grid-template-columns:1fr;}}
-.h2c{background:var(--paper-2);border-top:6px solid var(--signal);padding:18px 20px;}
-.h2c.alt{background:var(--ink);color:var(--paper-2);border-top-color:var(--blue);}
-.h2c .t{font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:700;color:var(--blue);margin-bottom:8px;}
-.h2c.alt .t{color:var(--signal);}
-.h2c .d{font-size:.92rem;line-height:1.45;color:var(--ink-60);}
-.h2c.alt .d{color:#9AA3B2;}
-.h2c .d b{color:var(--ink);font-weight:700;}
-.h2c.alt .d b{color:var(--paper-2);}
 .combo{margin-top:30px;border:2px solid var(--ink);background:var(--paper-2);padding:32px 34px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
 .combo h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.4rem;line-height:1.15;letter-spacing:-0.02em;margin:8px 0 12px;}
 .combo p{color:var(--ink-60);font-size:0.97rem;max-width:62ch;}
@@ -203,24 +172,18 @@ section{padding:82px 0;border-bottom:1px solid var(--line);}
 /* dois serviços */
 .svc{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
 @media(max-width:860px){.svc{grid-template-columns:1fr;}}
-.svc-card{display:flex;flex-direction:column;gap:14px;background:var(--paper-2);border:2px solid var(--ink);padding:34px 32px;}
-.svc-card.hi{background:var(--ink);color:var(--paper-2);box-shadow:10px 10px 0 var(--signal);}
-.svc-tag{font-family:'JetBrains Mono',monospace;font-size:0.76rem;font-weight:700;color:var(--blue);}
-.svc-card.hi .svc-tag{color:var(--signal);}
+.svc-card{display:flex;flex-direction:column;gap:14px;background:var(--paper-2);border:2px solid var(--ink);border-top:10px solid var(--signal);padding:30px 32px 34px;box-shadow:8px 8px 0 var(--ink);}
+.svc-card.b{border-top-color:var(--blue);}
+.svc-tag{font-family:'JetBrains Mono',monospace;font-size:0.76rem;font-weight:700;color:var(--ink);}
 .svc-card h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.5rem;line-height:1.1;letter-spacing:-0.02em;}
 .svc-card .svc-for{font-size:0.95rem;color:var(--ink-60);}
-.svc-card.hi .svc-for{color:#9AA3B2;}
 .svc-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin:4px 0 0;}
 .svc-list li{position:relative;padding-left:22px;font-size:0.95rem;color:var(--ink-60);}
-.svc-card.hi .svc-list li{color:#9AA3B2;}
 .svc-list li::before{content:'';position:absolute;left:0;top:8px;width:10px;height:10px;background:var(--signal);border:2px solid var(--ink);}
-.svc-card.hi .svc-list li::before{border-color:var(--signal);}
+.svc-card.b .svc-list li::before{background:var(--blue);}
 .svc-price{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);}
-.svc-card.hi .svc-price{border-color:#2A303B;}
 .svc-price .v{font-family:'Archivo',sans-serif;font-weight:800;font-size:2.2rem;line-height:1;letter-spacing:-0.03em;}
-.svc-card.hi .svc-price .v{color:var(--signal);}
 .svc-price .u{font-size:0.86rem;color:var(--ink-60);margin-top:6px;}
-.svc-card.hi .svc-price .u{color:#9AA3B2;}
 .svc-card .btn{margin-top:18px;align-self:flex-start;}
 .svc-note{margin-top:26px;font-size:0.88rem;color:var(--ink-60);}
 /* pain */
@@ -571,51 +534,51 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="hero-head">
       <span class="kicker">Google Ads para clipes musicais</span>
-      <h1 class="display">1 milhão de visualizações com R$ 5 mil investidos.<em>E colocamos o seu clipe no top de qualquer cidade.</em></h1>
+      <h1 class="display">1 milhão de visualizações com R$ 5 mil investidos.<em>O seu clipe no top da cidade onde você vai tocar.</em></h1>
       <p class="lede">Tráfego pago no Google Ads com CPV médio de R$&nbsp;0,005, comprovado em mais de 339 milhões de visualizações. Volume nacional para o número do clipe, ou audiência concentrada na praça onde o show está sendo negociado, para o contratante te encontrar em alta na cidade dele.</p>
-      <div class="hero-cta">
-        <a class="btn btn-signal" href="#servicos">Dominar uma cidade</a>
-        <a class="btn btn-dark" href="#servicos">Conseguir 1 milhão de views</a>
-      </div>
     </div>
 
-    <div class="hero-bottom">
-      <aside class="ticket">
-        <h3>SIMULAÇÃO PADRÃO</h3>
-        <div class="t-row"><span>Investimento em mídia</span><span>R$ 5.000</span></div>
-        <div class="t-row"><span>CPV trabalhado</span><span>R$ 0,005</span></div>
-        <div class="t-row"><span>Visualizações estimadas</span><span>~1.000.000</span></div>
-        <div class="t-row"><span>Operação metaUp</span><span>R$ 500</span></div>
-        <div class="t-total">
-          <span>Custo por 1.000 views</span>
-          <strong>R$ 5,50</strong>
-        </div>
-      </aside>
+    <div class="svc" id="servicos">
+        <article class="svc-card">
+          <p class="svc-tag">PRAÇA · VENDER SHOW</p>
+          <h3>Domínio de cidade</h3>
+          <p class="svc-for">Para quem está negociando show numa praça: a música entra no ranking daquela cidade dentro do YouTube, e isso aparece no painel do próprio artista.</p>
+          <ul class="svc-list">
+            <li>Campanha concentrada em uma cidade, não diluída pelo país</li>
+            <li>Entrega acelerada para o clipe ganhar tração local em poucos dias</li>
+            <li>A posição aparece no seu painel do YouTube for Artists, no formato "#7 em Manaus", com card pronto para postar e mandar para o contratante</li>
+            <li>Relatório do Google Ads com a origem geográfica das views, comprovando a concentração na praça</li>
+          </ul>
+          <div class="svc-price">
+            <div class="v">R$ 1.000</div>
+            <div class="u">por cidade · investimento em mídia à parte, definido no diagnóstico conforme o tamanho da praça</div>
+          </div>
+          <a class="btn btn-signal" href="https://wa.me/5551997485955?text=Quero%20dominar%20uma%20cidade%20com%20o%20meu%20clipe" target="_blank" rel="noopener">Quero dominar uma cidade</a>
+        </article>
 
-      <div class="hero-action">
-        <div class="hero-two">
-          <div class="h2c alt">
-            <p class="t">Praça · vender show</p>
-            <p class="d">Audiência concentrada na cidade onde você vai tocar, para o contratante te encontrar em alta lá. <b>R$ 1.000</b> por cidade.</p>
+        <article class="svc-card b">
+          <p class="svc-tag">VOLUME · NÚMERO DO CLIPE</p>
+          <h3>Impulsionamento de views</h3>
+          <p class="svc-for">Para quem precisa do número embaixo do vídeo: prova social para negociar cachê, contrato e patrocínio.</p>
+          <ul class="svc-list">
+            <li>Campanha de visualização aberta por região e estilo musical</li>
+            <li>CPV médio de R$ 0,005: cerca de R$ 5.000 em mídia para 1 milhão de views</li>
+            <li>Otimização diária e relatório com perfil de audiência</li>
+            <li>Views públicas contabilizadas pelo próprio YouTube, sem risco para o canal</li>
+          </ul>
+          <div class="svc-price">
+            <div class="v">R$ 500</div>
+            <div class="u">por campanha com até R$ 5.000 em mídia · acima disso, 10% do investimento</div>
           </div>
-          <div class="h2c">
-            <p class="t">Volume · número do clipe</p>
-            <p class="d">Views para negociar cachê, contrato e patrocínio. <b>R$ 500</b> de operação até R$ 5.000 em mídia.</p>
-          </div>
-        </div>
-        <ul class="hero-proof">
-          <li><b>+5 anos</b> focados em tráfego artístico</li>
-          <li><b>Campanhas já feitas:</b> Luan Santana, Victor &amp; Leo, Zezé Di Camargo, Lucas Lucco, Pedro Paulo &amp; Alex, entre outros</li>
-          <li><b>Sua campanha rodando em até 48h</b></li>
-        </ul>
+          <a class="btn btn-solid" href="https://wa.me/5551997485955?text=Quero%201%20milh%C3%A3o%20de%20views%20no%20meu%20clipe" target="_blank" rel="noopener">Quero 1 milhão de views</a>
+        </article>
       </div>
-    </div>
 
     <div class="strip">
       <div><div class="n mono">339 mi</div><div class="l">views públicas no YouTube entregues</div></div>
       <div><div class="n mono">R$ 1,69 mi</div><div class="l">em mídia gerenciada no Google Ads</div></div>
       <div><div class="n mono">48h</div><div class="l">para a campanha entrar no ar</div></div>
-      <div><div class="n mono">R$ 500</div><div class="l">de taxa até R$ 5.000 de mídia, depois 10%</div></div>
+      <div><div class="n mono sm">Sem fidelidade</div><div class="l">taxa por campanha, sem mensalidade</div></div>
     </div>
   </div>
 </section>
@@ -628,24 +591,8 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
         <p class="auth-sig">Douglas · gestor de tráfego artístico e fundador da metaUp</p>
         <h2 class="display">Não é o nosso primeiro clipe. São 5 anos de foco.</h2>
         <p>Trabalhamos com tráfego pago para o mercado musical desde 2021, rodando campanhas de lançamento para artistas musicais. Já passaram pela nossa gestão nomes como <strong>Luan Santana, Victor &amp; Leo, Zezé Di Camargo, Lucas Lucco e Pedro Paulo &amp; Alex</strong>, além de muitos outros artistas.</p>
-        <p>Bagagem de <strong>+275 campanhas, R$ 1,69 milhão em mídia gerida e mais de 339 milhões de visualizações públicas no YouTube</strong>.</p>
-        <div class="auth-stats">
-          <div><div class="n mono">5 anos</div><div class="l">só em tráfego para artistas</div></div>
-          <div><div class="n mono">339 mi+</div><div class="l">views públicas entregues no YouTube</div></div>
-          <div><div class="n mono">R$ 0,0050</div><div class="l">CPV médio em 275 campanhas</div></div>
-        </div>
+        <p class="auth-bag">Bagagem de <strong>+275 campanhas, R$ 1,69 milhão em mídia gerida e mais de 339 milhões de visualizações públicas no YouTube</strong>.</p>
 
-        <div class="roster">
-          <p class="rt">ARTISTAS QUE JÁ PASSARAM PELA NOSSA GESTÃO</p>
-          <ul>
-            <li>Luan Santana</li>
-            <li>Victor &amp; Leo</li>
-            <li>Zezé Di Camargo</li>
-            <li>Lucas Lucco</li>
-            <li>Pedro Paulo &amp; Alex</li>
-            <li class="more">+ centenas de artistas independentes</li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -793,37 +740,22 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
     </div>
     <div class="stack">
       <article>
-        <div class="tag">01 / PROVA SOCIAL</div>
-        <h3>Um número que sustenta a negociação</h3>
-        <p>Clipe com seis dígitos muda o tom da conversa com contratante, selo e patrocinador. O mesmo artista, com outra percepção de tamanho.</p>
-      </article>
-      <article>
-        <div class="tag">02 / ALGORITMO</div>
-        <h3>Tração que o YouTube entende</h3>
-        <p>Volume e retenção de audiência em curto espaço de tempo alimentam recomendados e sugeridos, a parte orgânica que vem depois da mídia paga.</p>
-      </article>
-      <article>
-        <div class="tag">03 / PÚBLICO CERTO</div>
+        <div class="tag">01 / PÚBLICO CERTO</div>
         <h3>Segmentação por gênero, região e comportamento</h3>
         <p>Anúncio exibido para quem já escuta o seu estilo, na praça onde o artista toca. View de gente que pode virar ouvinte, seguidor e público de show.</p>
       </article>
       <article>
-        <div class="tag">04 / ATIVO DE CANAL</div>
+        <div class="tag">02 / ATIVO DE CANAL</div>
         <h3>Canal mais forte para o próximo lançamento</h3>
         <p>Inscritos e histórico de audiência acumulados agora reduzem o custo do lançamento seguinte. Cada campanha deixa base para a próxima.</p>
       </article>
       <article>
-        <div class="tag">05 / TRANSPARÊNCIA</div>
-        <h3>Relatório e acesso aos dados</h3>
-        <p>Você vê quanto foi gasto, quantas views entraram, qual CPV saiu e de onde vem a audiência. Sem caixa-preta.</p>
-      </article>
-      <article>
-        <div class="tag">06 / FOCO</div>
+        <div class="tag">03 / FOCO</div>
         <h3>A campanha é de visualização</h3>
         <p>Todo o investimento é otimizado para uma coisa: gente assistindo o clipe. Curtida, comentário e inscrição podem vir como consequência, mas não são a meta da campanha nem entram na estimativa.</p>
       </article>
       <article>
-        <div class="tag">07 / SEGURANÇA</div>
+        <div class="tag">04 / SEGURANÇA</div>
         <h3>100% dentro do Google Ads</h3>
         <p>Tráfego oficial, exibido a pessoas reais na plataforma. Nada de bot, painel de views ou prática que coloque a monetização em risco.</p>
       </article>
@@ -837,7 +769,7 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="head">
       <h2 class="display">Compare o custo de aparecer</h2>
-      <p>Quanto custa colocar o seu trabalho na frente de mil pessoas, por canal:</p>
+      <p>Quanto custa colocar o seu trabalho na frente de mil pessoas, por canal. A ordem costuma surpreender:</p>
     </div>
     <div class="cmp-cards">
       <article class="cc cc-hi">
@@ -861,12 +793,12 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
       </article>
       <article class="cc cc-bad">
         <h3>Painel de views artificiais</h3>
-        <div class="cc-price">Barato</div>
-        <div class="cc-unit">mas não é audiência</div>
-        <p>Risco de punição do canal e zero público real</p>
+        <div class="cc-price">R$ 6</div>
+        <div class="cc-unit">por 1.000 views</div>
+        <p>Custa mais que o anúncio oficial e ainda arrisca o canal, sem entregar público real</p>
       </article>
     </div>
-    <p class="cmp-note">Valores de referência de mercado para comparação. O CPV final da sua campanha depende de gênero musical, praça e período do ano, e é acompanhado durante toda a veiculação.</p>
+    <p class="cmp-note"><b>Nem o bot é mais barato.</b> O painel cobra cerca de R$ 6 por mil visualizações, mais que o nosso CPV médio, e entrega número em vez de audiência: view que pode ser descontada do contador e coloca a monetização do canal em risco. Valores de referência de mercado para comparação.</p>
   </div>
 </section>
 
@@ -973,49 +905,9 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- SERVIÇOS -->
-<section id="servicos">
+<!-- LANÇAMENTO COMPLETO -->
+<section id="lancamento">
   <div class="wrap">
-    <div class="head">
-      <h2 class="display">Dominar uma praça, crescer o número, ou os dois</h2>
-      <p>Em todos, o investimento em mídia é do cliente e vai direto para os anúncios. A metaUp cobra só a operação, por campanha e sem fidelidade.</p>
-    </div>
-
-    <div class="svc">
-      <article class="svc-card hi">
-        <p class="svc-tag">CARRO-CHEFE · PRAÇA</p>
-        <h3>Domínio de cidade</h3>
-        <p class="svc-for">Para quem está negociando show numa praça: a música entra no ranking daquela cidade dentro do YouTube, e isso aparece no painel do próprio artista.</p>
-        <ul class="svc-list">
-          <li>Campanha concentrada em uma cidade, não diluída pelo país</li>
-          <li>Entrega acelerada para o clipe ganhar tração local em poucos dias</li>
-          <li>A posição aparece no seu painel do YouTube for Artists, no formato "#7 em Manaus", com card pronto para postar e mandar para o contratante</li>
-          <li>Relatório do Google Ads com a origem geográfica das views, comprovando a concentração na praça</li>
-        </ul>
-        <div class="svc-price">
-          <div class="v">R$ 1.000</div>
-          <div class="u">por cidade · investimento em mídia à parte, definido no diagnóstico conforme o tamanho da praça</div>
-        </div>
-        <a class="btn btn-signal" href="https://wa.me/5551997485955?text=Quero%20dominar%20uma%20cidade%20com%20o%20meu%20clipe" target="_blank" rel="noopener">Quero dominar uma cidade</a>
-      </article>
-
-      <article class="svc-card">
-        <p class="svc-tag">BASE · VOLUME</p>
-        <h3>Impulsionamento de views</h3>
-        <p class="svc-for">Para quem precisa do número embaixo do vídeo: prova social para negociar cachê, contrato e patrocínio.</p>
-        <ul class="svc-list">
-          <li>Campanha de visualização aberta por região e estilo musical</li>
-          <li>CPV médio de R$ 0,005: cerca de R$ 5.000 em mídia para 1 milhão de views</li>
-          <li>Otimização diária e relatório com perfil de audiência</li>
-        </ul>
-        <div class="svc-price">
-          <div class="v">R$ 500</div>
-          <div class="u">por campanha com até R$ 5.000 em mídia · acima disso, 10% do investimento</div>
-        </div>
-        <a class="btn btn-line" href="#oferta">Ver o que está incluído</a>
-      </article>
-    </div>
-
     <div class="combo">
       <div>
         <p class="svc-tag">O MAIS PEDIDO PARA LANÇAMENTO</p>
@@ -1024,7 +916,6 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
         <p class="combo-ex">Exemplo com 3 cidades: R$ 500 da campanha de volume + R$ 3.000 das três praças = <b>R$ 3.500 de operação</b>, mais o investimento em mídia.</p>
       </div>
       <a class="btn btn-solid" href="https://wa.me/5551997485955?text=Quero%20montar%20um%20lan%C3%A7amento%20completo%3A%20volume%20%2B%20pra%C3%A7as" target="_blank" rel="noopener">Montar meu lançamento</a>
-    </div>
   </div>
 </section>
 
