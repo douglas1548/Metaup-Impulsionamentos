@@ -32,6 +32,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
+/* faixa: view real, sem bot */
+.real{background:var(--signal);border-bottom:2px solid var(--ink);}
+.real-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:start;}
+@media(max-width:900px){.real-grid{grid-template-columns:1fr;gap:26px;}}
+.real-k{font-family:'JetBrains Mono',monospace;font-size:var(--fs-200);font-weight:700;color:var(--ink);background:var(--ink);color:var(--signal);display:inline-block;padding:6px 12px;margin-bottom:16px;}
+.real h2{font-family:'Archivo',sans-serif;font-weight:800;font-stretch:112%;letter-spacing:-.022em;line-height:1.02;font-size:var(--fs-900);color:var(--ink);margin-bottom:14px;}
+.real-lede{font-size:var(--fs-500);color:#4A3F10;line-height:1.5;max-width:46ch;}
+.real-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0;}
+.real-list li{position:relative;padding-left:40px;font-size:var(--fs-400);color:#4A3F10;line-height:1.45;}
+.real-list li b{color:var(--ink);font-weight:700;}
+.real-list li::before{content:"";position:absolute;left:0;top:1px;width:24px;height:24px;background:var(--ink);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.6 16.8 5 12.2l1.4-1.4 3.2 3.2 8-8L19 7.4z' fill='%23000'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.6 16.8 5 12.2l1.4-1.4 3.2 3.2 8-8L19 7.4z' fill='%23000'/%3E%3C/svg%3E") center/contain no-repeat;}
 /* escala tipográfica */
 :root{
   --fs-100:0.72rem;
@@ -627,7 +640,7 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
 <section class="hero">
   <div class="wrap">
     <div class="hero-head">
-      <span class="kicker">Google Ads para clipes musicais</span>
+      <span class="kicker">Google Ads para clipes musicais · views reais, sem bot</span>
       <h1 class="display">View que vira show.<em>1 milhão de visualizações por R$ 5 mil. E o seu clipe no topo da cidade onde você vai tocar.</em></h1>
       <p class="lede">CPV médio de R$&nbsp;0,005 no Google Ads, comprovado em 339 milhões de visualizações entregues. Você escolhe por onde começar.</p>
     </div>
@@ -679,6 +692,24 @@ src="https://www.facebook.com/tr?id=1638413824731941&ev=PageView&noscript=1"
       <div><div class="n mono">R$ 1,69 mi</div><div class="l">em mídia gerenciada no Google Ads</div></div>
       <div><div class="n mono">48h</div><div class="l">para a campanha entrar no ar</div></div>
       <div><div class="n mono sm">Sem fidelidade</div><div class="l">taxa por campanha, sem mensalidade</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIEW REAL, SEM BOT -->
+<section class="real" id="sem-bot">
+  <div class="wrap">
+    <div class="real-grid">
+      <div>
+        <p class="real-k">SEM BOT · SEM PAINEL DE VIEWS</p>
+        <h2 class="display">Quem assiste o seu clipe é gente de verdade.</h2>
+        <p class="real-lede">A entrega é 100% por anúncio no Google Ads, a plataforma oficial de publicidade do YouTube. Pessoas reais veem o anúncio dentro do aplicativo e escolhem assistir ao seu clipe.</p>
+      </div>
+      <ul class="real-list">
+        <li><b>View pública, igual à orgânica.</b> É contabilizada pelo próprio YouTube e aparece no contador embaixo do vídeo.</li>
+        <li><b>Canal e monetização protegidos.</b> Nada de painel de views, que é o que gera punição e derruba monetização.</li>
+        <li><b>Você confere sozinho, sem depender de nós.</b> No YouTube Studio, em Análises &#8250; Origem do tráfego, a campanha aparece como <b>"Publicidade no YouTube"</b>. Painel de bot nunca aparece assim.</li>
+      </ul>
     </div>
   </div>
 </section>
